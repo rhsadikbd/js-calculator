@@ -1,44 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.calculator_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-table{
-    width: fit-content;
-    border-collapse: collapse;
-}
-table tbody input{
-    width: 77px;
-    height: 50px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    border: 1px solid rgb(0, 139, 0);
-}
-table tbody input:hover,
-table tbody input:active{
-    background-color: rgb(0, 112, 0);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Pacifico|Oxygen);
+
+body {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-#display{
-    width: 100%;
-    border: 10px solid green;
-    height: 70px;
-    box-sizing: border-box;
-    outline: none;
-    font-size: 20px;
-    text-align: right;
-    font-weight: bolder;
-    padding: 0 10px;
+p {
+  margin: 0 0 3px;
+  font-family: Pacifico;
+  position: relative;
+  left: 5%;
+}
+
+.calculator {
+  position: relative;
+  margin: auto;
+  padding: 1em 0;
+  display: block-inline;
+  width: 300px;
+  background-color: #444;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 3px #111;
+  font-family: "Oxygen";
+}
+
+.calc-row {
+  text-align: center;
+}
+
+.calc-row .screen {
+  font-family: Droid Sans Mono;
+  display: table;
+  width: 80%;
+  background-color: #aaa;
+  text-align: right;
+  font-size: 24px;
+  height: 50px;
+  margin: auto auto 15px;
+  padding-right: 0.5em;
+  border: 1px solid #888;
+  color: #333;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.calc-row div {
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid #555;
+  background-color: #eee;
+  padding: 10px 0;
+  margin: 7px 5px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 1px 1px #222;
+  width: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.calc-row div.zero {
+  width: 112px;
+}
+
+.calc-row div.zero {
+  margin-right: 5px;
 }

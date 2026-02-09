@@ -1,20 +1,12 @@
+let display = document.querySelector("#display");
 
-
-let display = document.getElementById("display");
-
-
-function calculate(val){
-    display.value += val;
+function deleteAll() {
+  display.value = "";
 }
-
-function emptyDisplay(){
-    display.value = "";
+function calculator(newVal) {
+  display.value += newVal;
 }
-
-function answer(){
-    let equal = display.value;
-    let result = eval(equal);
-    display.value = result;
-
+function finalCalculation() {
+  let result = eval(display.value);
+  display.value = result;
 }
-

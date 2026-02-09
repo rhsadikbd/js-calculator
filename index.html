@@ -1,60 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <p>Calculator</p>
+      <div class="calc-row">
+        <input type="text" class="screen" id="display" />
+      </div>
 
-<body>
+      <div class="calc-row">
+        <div class="button" onclick="deleteAll()">C</div>
+        <div class="button" onclick="calculator('(')">(</div>
+        <div class="button" onclick="calculator(')')">)</div>
+        <div class="button" onclick="calculator('%')">%</div>
+      </div>
 
-    <div class="calculator_wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <td colspan="4"><input type="text" id="display"></td>
-                </tr>
-            </thead>
-            <tbody>
+      <div class="calc-row">
+        <div class="button" onclick="calculator('7')">7</div>
+        <div class="button" onclick="calculator('8')">8</div>
+        <div class="button" onclick="calculator('9')">9</div>
+        <div class="button" onclick="calculator('/')">/</div>
+      </div>
 
-                <tr>
-                    <td><input type="button" value="C" onclick="emptyDisplay()"></td>
-                    <td><input type="button" onclick="calculate('(')" value="("></td>
-                    <td><input type="button" onclick="calculate(')')" value=")"></td>
-                    <td><input type="button" value="<<"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" onclick="calculate('7')" value="7"></td>
-                    <td><input type="button" onclick="calculate('8')" value="8"></td>
-                    <td><input type="button" onclick="calculate('9')" value="9"></td>
-                    <td><input type="button" onclick="calculate('+')" value="+"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" onclick="calculate('4')" value="4"></td>
-                    <td><input type="button" onclick="calculate('5')" value="5"></td>
-                    <td><input type="button" onclick="calculate('6')" value="6"></td>
-                    <td><input type="button" onclick="calculate('-')" value="-"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" onclick="calculate('1')" value="1"></td>
-                    <td><input type="button" onclick="calculate('2')" value="2"></td>
-                    <td><input type="button" onclick="calculate('3')" value="3"></td>
-                    <td><input type="button" onclick="calculate('*')" value="*"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" onclick="calculate('0')" value="0"></td>
-                    <td><input type="button" onclick="calculate('.')" value="."></td>
-                    <td><input type="button" onclick="calculate('/')" value="/"></td>
-                    <td><input type="button" onclick="answer()" value="="></td>
-                </tr>
-            </tbody>
-        </table>
+      <div class="calc-row">
+        <div class="button" onclick="calculator('4')">4</div>
+        <div class="button" onclick="calculator('5')">5</div>
+        <div class="button" onclick="calculator('6')">6</div>
+        <div class="button" onclick="calculator('*')">*</div>
+      </div>
+
+      <div class="calc-row">
+        <div class="button" onclick="calculator('1')">1</div>
+        <div class="button" onclick="calculator('2')">2</div>
+        <div class="button" onclick="calculator('3')">3</div>
+        <div class="button" onclick="calculator('-')">-</div>
+      </div>
+
+      <div class="calc-row">
+        <div class="button" onclick="calculator('0')">0</div>
+        <div class="button decimal" onclick="calculator('.')">.</div>
+        <div class="button" onclick="finalCalculation()">=</div>
+        <div class="button" onclick="calculator('+')">+</div>
+      </div>
     </div>
-
-
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
